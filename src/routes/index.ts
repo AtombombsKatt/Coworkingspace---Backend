@@ -5,7 +5,6 @@ import roomRoutes from './roomRoutes';
 import bookingRoutes from './bookingRoutes'; // Importera bookingRoutes
 
 
-
 const router = Router();
 
 router.use('/users', userRoutes);

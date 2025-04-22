@@ -13,7 +13,6 @@ const router = Router();
 router.get('/my', validateToken, asyncHandler(getMyBookingsController));
 router.get('/user/:userId', validateToken, requireAdmin,(getUserBookingsController));
 router.get('/', validateToken, requireAdmin, asyncHandler (getAllBookingsController));
-
 //boka rum
 router.post('/book', validateToken, asyncHandler(createBookingController));
 

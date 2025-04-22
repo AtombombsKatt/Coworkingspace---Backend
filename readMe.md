@@ -56,7 +56,7 @@ The APIs can be tested with the program Postman.
 
 ### 1. Clone the repo
 
-git clone https://github.com/your-username/your-repo.git
+git clone  https://github.com/AtombombsKatt/Coworkingspace---Backend.git
 cd your-repo
 
 ### 2. Install dependacies

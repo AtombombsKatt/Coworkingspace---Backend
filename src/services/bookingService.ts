@@ -68,7 +68,10 @@ export const updateBooking = async (userId: string, userRole: string, bookingId:
   booking.startTime = startTime;
   booking.endTime = endTime;
   await booking.save();
-  
+  io.emit('bookingUpdated', {
+    message: `Bokning för användaren "${userId}" har uppdaterats.`,
+    booking,
+  });
   return booking;
 };
 
