@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const roomController_1 = require("../controllers/roomController");
+const authMiddleware_1 = require("../middlewares/authMiddleware");
+const adminMiddleware_1 = require("../middlewares/adminMiddleware");
+const cacheMiddleware_1 = require("../middlewares/cacheMiddleware");
+const asyncHandler_1 = require("../utils/asyncHandler");
+const roomController_2 = require("../controllers/roomController");
+const router = (0, express_1.Router)();
+router.get('/', authMiddleware_1.validateToken, cacheMiddleware_1.cacheMiddleware, (roomController_2.getAllRoomsController));
+router.post('/create', authMiddleware_1.validateToken, adminMiddleware_1.requireAdmin, (0, asyncHandler_1.asyncHandler)(roomController_1.createRoomController));
+router.put('/:id', authMiddleware_1.validateToken, adminMiddleware_1.requireAdmin, (0, asyncHandler_1.asyncHandler)(roomController_1.updateRoomController));
+router.delete('/:id', authMiddleware_1.validateToken, adminMiddleware_1.requireAdmin, (0, asyncHandler_1.asyncHandler)(roomController_1.deleteRoomController));
+exports.default = router;
