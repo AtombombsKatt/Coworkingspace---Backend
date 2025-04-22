@@ -1,0 +1,1 @@
+export const ROOMS_CACHE_KEY = 'cache:/api/rooms/';

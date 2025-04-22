@@ -1,0 +1,102 @@
+2025-04-20T13:47:30.874Z [error]: Fel vid POST /api/rooms/create: alla fält krävs
+2025-04-20T13:47:30.879Z [error]: Stacktrace: Error: alla fält krävs
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\roomController.ts:14:11
+    at Generator.next (<anonymous>)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\roomController.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\roomController.ts:4:12)
+    at createRoomController (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\roomController.ts:10:75)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\utils\asyncHandler.ts:5:21
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at requireAdmin (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\adminMiddleware.ts:9:3)
+2025-04-20T17:28:22.885Z [error]: Fel vid POST /api/bookings/book: fel med bokningen
+2025-04-20T17:28:22.889Z [error]: Stacktrace: Error: fel med bokningen
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\bookingController.ts:31:13
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\bookingController.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21T10:08:47.935Z [error]: Fel vid DELETE /api/bookings/68052e62af529b4bd3d3e349: Bokningen hittades inte
+2025-04-21T10:08:47.939Z [error]: Stacktrace: Error: Bokningen hittades inte
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\bookingService.ts:94:11
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\bookingService.ts:6:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21T11:36:58.967Z [error]: Fel vid GET /api/rooms/my: Ogiltig token
+2025-04-21T11:36:58.973Z [error]: Stacktrace: Error: Ogiltig token
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:27:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)
+2025-04-21T22:56:42.223Z [error]: Fel vid POST /api/users/register: Unexpected non-whitespace character after JSON at position 82
+2025-04-21T22:56:42.225Z [error]: Stacktrace: SyntaxError: Unexpected non-whitespace character after JSON at position 82
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:514:28)
+    at IncomingMessage.emit (node:domain:488:12)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+2025-04-21T22:56:53.940Z [error]: Fel vid POST /api/users/register: Registrering misslyckades
+2025-04-21T22:56:53.943Z [error]: Stacktrace: Error: Registrering misslyckades
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\authController.ts:23:11
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\authController.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-22T02:45:42.251Z [error]: Fel vid POST /api/users/register: Registrering misslyckades
+2025-04-22T02:45:42.254Z [error]: Stacktrace: Error: Registrering misslyckades
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\authController.ts:26:11
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\controllers\authController.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-22T02:46:32.394Z [error]: Fel vid POST /api/users/register: Användarnamnet är upptaget
+2025-04-22T02:46:32.397Z [error]: Stacktrace: Error: Användarnamnet är upptaget
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\authService.ts:47:11
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-22T02:48:50.417Z [error]: Fel vid GET /api/rooms/: ingen token skickades
+2025-04-22T02:48:50.422Z [error]: Stacktrace: Error: ingen token skickades
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:17:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)
+2025-04-22T02:52:53.029Z [error]: Fel vid GET /api/rooms/: ingen token skickades
+2025-04-22T02:52:53.030Z [error]: Stacktrace: Error: ingen token skickades
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:17:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)
+2025-04-22T02:53:07.558Z [error]: Fel vid GET /api/rooms/: Stopp i lagens namn! ingen token skickades 👮
+2025-04-22T02:53:07.563Z [error]: Stacktrace: Error: Stopp i lagens namn! ingen token skickades 👮
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:17:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)
