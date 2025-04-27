@@ -8,9 +8,15 @@ const JWT_SECRET = process.env.JWT_SECRET || 'mysupersecretmegakey';
 
 export const validateToken = (req: authenticatedRequest, res: Response, next: NextFunction): void => {
   const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1]; // Bearer <token>
-  console.log("Authorization header:", authHeader);
-  console.log("Token:", token);
+  if (!authHeader || !authHeader.startsWith('bearer ')) { //prefix grejjen för undefined
+    throw new ApiError(401, 'Token saknas eller är felaktigt formaterad');
+  }
+  
+  const token = authHeader.split(' ')[1];
+  
+  // const token = authHeader && authHeader.split(' ')[1]; 
+  // console.log("Authorization header:", authHeader);
+  // console.log("Token:", token);
 
 
   if (!token) {

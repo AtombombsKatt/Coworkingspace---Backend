@@ -328,3 +328,93 @@
     at IncomingMessage.onEnd (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\raw-body\index.js:287:7)
     at IncomingMessage.emit (node:events:514:28)
     at IncomingMessage.emit (node:domain:488:12)
+2025-04-24T23:24:23.722Z [error]: Fel vid POST /api/users/register: Användarnamnet är upptaget
+2025-04-24T23:24:23.727Z [error]: Stacktrace: Error: Användarnamnet är upptaget
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\authService.ts:41:11
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-24T23:25:58.745Z [error]: Fel vid POST /api/users/register: Användarnamnet är upptaget
+2025-04-24T23:25:58.746Z [error]: Stacktrace: Error: Användarnamnet är upptaget
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\authService.ts:41:11
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-24T23:32:18.298Z [error]: Fel vid GET /api/bookings/: Token saknas eller är felaktigt formaterad
+2025-04-24T23:32:18.300Z [error]: Stacktrace: Error: Token saknas eller är felaktigt formaterad
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:12:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)
+2025-04-24T23:43:48.926Z [error]: Fel vid GET /api/bookings/my: Token saknas eller är felaktigt formaterad
+2025-04-24T23:43:48.927Z [error]: Stacktrace: Error: Token saknas eller är felaktigt formaterad
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:12:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)
+2025-04-24T23:44:39.334Z [error]: Fel vid GET /api/rooms/: Token saknas eller är felaktigt formaterad
+2025-04-24T23:44:39.334Z [error]: Stacktrace: Error: Token saknas eller är felaktigt formaterad
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:12:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)
+2025-04-24T23:45:08.509Z [error]: Fel vid POST /api/users/register: Användarnamnet är upptaget
+2025-04-24T23:45:08.510Z [error]: Stacktrace: Error: Användarnamnet är upptaget
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\authService.ts:41:11
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\services\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-24T23:47:10.141Z [error]: Fel vid GET /api/bookings/: Token saknas eller är felaktigt formaterad
+2025-04-24T23:47:10.142Z [error]: Stacktrace: Error: Token saknas eller är felaktigt formaterad
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:12:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)
+2025-04-24T23:50:18.139Z [error]: Fel vid GET /api/bookings/: endast admin har tillgång
+2025-04-24T23:50:18.144Z [error]: Stacktrace: Error: endast admin har tillgång
+    at requireAdmin (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\adminMiddleware.ts:7:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:29:5)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+2025-04-24T23:50:39.240Z [error]: Fel vid GET /api/bookings/my: Token saknas eller är felaktigt formaterad
+2025-04-24T23:50:39.242Z [error]: Stacktrace: Error: Token saknas eller är felaktigt formaterad
+    at validateToken (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\src\middlewares\authMiddleware.ts:12:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:582:12)
+    at next (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Fir3M\Desktop\Skolgrejjer\ProjektBackend\node_modules\router\index.js:186:3)

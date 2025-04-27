@@ -1,7 +1,8 @@
 import bcrypt from 'bcryptjs';
-import { generateToken } from '../utils/jwtUtils';
-import User, { IUser } from '../models/user';
+import { generateToken, createJwtPayload } from '../utils/jwtUtils';
+import User from '../models/user';
 import { ApiError } from '../utils/apiError';  
+
 
 // Kontrollera om användaren redan finns funktion
 const checkIfUserExists = async (username: string) => {
@@ -24,19 +25,12 @@ export const loginUser = async (username: string, password: string) => {
     throw new ApiError(400, 'Fel användarnamn eller lösenord');  
   }
 
-  const token = generateToken({
-    id: user._id.toString(),
-    username: user.username,
-    role: user.role,
-  });
+  const payload = createJwtPayload(user);
+  const token = generateToken(payload);
 
   return {
     token,
-    user: {
-      id: user._id.toString(),
-      username: user.username,
-      role: user.role,
-    },
+    user: payload,
   };
 };
 
@@ -48,14 +42,15 @@ export const registerUser = async (username: string, password: string, role: str
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
-  const newUser = new User({ username, password: hashedPassword, role }) as IUser;
+  const newUser = new User({ username, password: hashedPassword, role });
   await newUser.save();
 
-  const token = generateToken({
-    id: newUser._id.toString(),
-    username: newUser.username,
-    role: newUser.role,
-  });
+  const payload = createJwtPayload(newUser);
+  const token = generateToken(payload);
 
-  return { token, user: newUser };
+  return { 
+    token,
+    user: payload
+  };
 };
+    

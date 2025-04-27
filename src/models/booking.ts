@@ -1,10 +1,10 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IBooking extends Document {
-  userId: string; // Användarens ID som har gjort bokningen
-  roomId: string; // Rummets ID
-  startTime: Date; // Starttid för bokningen
-  endTime: Date; // Sluttid för bokningen
+  userId: string; 
+  roomId: string; 
+  startTime: Date; 
+  endTime: Date; 
 }
 
 //  schema för bokningen

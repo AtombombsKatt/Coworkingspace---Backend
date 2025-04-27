@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { jwtPayload } from '../types/payloadInterface';
+import { IUser } from '../models/user';
 const JWT_SECRET = process.env.JWT_SECRET || 'mysupersecretmegakey';
 
 export function generateToken (payload: jwtPayload): string {
@@ -7,3 +8,10 @@ export function generateToken (payload: jwtPayload): string {
 }
 
   
+export function createJwtPayload(user: IUser): jwtPayload {
+    return {
+      id: user._id.toString(),
+      username: user.username,
+      role: user.role,
+    };
+  }

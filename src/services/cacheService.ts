@@ -1,6 +1,6 @@
 import redisClient from '../services/redisClient';  
 
-// Funktion för att hämta data från cache
+//  hämta data från cache
 export const getFromCache = async (key: string) => {
   try {
     const cachedData = await redisClient.get(key);
@@ -11,7 +11,7 @@ export const getFromCache = async (key: string) => {
   }
 };
 
-// Funktion för att spara data till cache
+//  spara data till cache
 export const saveToCache = async (key: string, data: any, expiration = 3600) => {
   try {
     await redisClient.setEx(key, expiration, JSON.stringify(data));
@@ -20,7 +20,7 @@ export const saveToCache = async (key: string, data: any, expiration = 3600) => 
   }
 };
 
-// Funktion för att ta bort data från cache
+//  ta bort data från cache
 export const deleteFromCache = async (key: string) => {
   try {
     await redisClient.del(key);
