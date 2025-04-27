@@ -9,9 +9,13 @@ const apiError_1 = require("../utils/apiError");
 const JWT_SECRET = process.env.JWT_SECRET || 'mysupersecretmegakey';
 const validateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1]; // Bearer <token>
-    console.log("Authorization header:", authHeader);
-    console.log("Token:", token);
+    if (!authHeader || !authHeader.startsWith('bearer ')) { //prefix grejjen för undefined
+        throw new apiError_1.ApiError(401, 'Token saknas eller är felaktigt formaterad');
+    }
+    const token = authHeader.split(' ')[1];
+    // const token = authHeader && authHeader.split(' ')[1]; 
+    // console.log("Authorization header:", authHeader);
+    // console.log("Token:", token);
     if (!token) {
         throw new apiError_1.ApiError(401, 'Stopp i lagens namn! ingen token skickades 👮');
     }

@@ -35,18 +35,11 @@ const loginUser = (username, password) => __awaiter(void 0, void 0, void 0, func
     if (!isPasswordCorrect) {
         throw new apiError_1.ApiError(400, 'Fel användarnamn eller lösenord');
     }
-    const token = (0, jwtUtils_1.generateToken)({
-        id: user._id.toString(),
-        username: user.username,
-        role: user.role,
-    });
+    const payload = (0, jwtUtils_1.createJwtPayload)(user);
+    const token = (0, jwtUtils_1.generateToken)(payload);
     return {
         token,
-        user: {
-            id: user._id.toString(),
-            username: user.username,
-            role: user.role,
-        },
+        user: payload,
     };
 });
 exports.loginUser = loginUser;
@@ -59,11 +52,11 @@ const registerUser = (username, password, role) => __awaiter(void 0, void 0, voi
     const hashedPassword = yield bcryptjs_1.default.hash(password, 10);
     const newUser = new user_1.default({ username, password: hashedPassword, role });
     yield newUser.save();
-    const token = (0, jwtUtils_1.generateToken)({
-        id: newUser._id.toString(),
-        username: newUser.username,
-        role: newUser.role,
-    });
-    return { token, user: newUser };
+    const payload = (0, jwtUtils_1.createJwtPayload)(newUser);
+    const token = (0, jwtUtils_1.generateToken)(payload);
+    return {
+        token,
+        user: payload
+    };
 });
 exports.registerUser = registerUser;

@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteFromCache = exports.saveToCache = exports.getFromCache = void 0;
 const redisClient_1 = __importDefault(require("../services/redisClient"));
-// Funktion för att hämta data från cache
+//  hämta data från cache
 const getFromCache = (key) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const cachedData = yield redisClient_1.default.get(key);
@@ -26,7 +26,7 @@ const getFromCache = (key) => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.getFromCache = getFromCache;
-// Funktion för att spara data till cache
+//  spara data till cache
 const saveToCache = (key_1, data_1, ...args_1) => __awaiter(void 0, [key_1, data_1, ...args_1], void 0, function* (key, data, expiration = 3600) {
     try {
         yield redisClient_1.default.setEx(key, expiration, JSON.stringify(data));
@@ -36,7 +36,7 @@ const saveToCache = (key_1, data_1, ...args_1) => __awaiter(void 0, [key_1, data
     }
 });
 exports.saveToCache = saveToCache;
-// Funktion för att ta bort data från cache
+//  ta bort data från cache
 const deleteFromCache = (key) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield redisClient_1.default.del(key);

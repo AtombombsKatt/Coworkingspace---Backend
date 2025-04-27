@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const redis_1 = require("redis");
+const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379'; // Fallback till localhost om miljövariabeln inte finns
 const redisClient = (0, redis_1.createClient)({
-    url: 'redis://localhost:6379' // 👈 viktigt!
+    url: redisUrl // Använd miljövariabeln från Railway om den är satt
 });
 redisClient.on('connect', () => {
     console.log('✅ Redis connected');
