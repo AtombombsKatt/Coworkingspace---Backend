@@ -7,6 +7,8 @@ node_modules/
 # Logs
 *.log
 
+node_modules/
+
 
 # OS-specific files
 .DS_Store
