@@ -20,6 +20,10 @@ export const createBooking = async (userId: string, roomId: string, startTime: D
     ],
   });
 
+  if (startTime >= endTime) {
+    throw new ApiError(400, 'Starttid måste vara före sluttid');
+  }
+  
   if (existingBooking) {
     throw new ApiError(400, 'Rummet är redan bokat på den här tiden');
   }
@@ -61,9 +65,14 @@ export const updateBooking = async (userId: string, userRole: string, bookingId:
     throw new ApiError(404, 'Bokningen hittades inte');
   }
 
+  if (startTime >= endTime) {
+    throw new ApiError(400, 'starttid måste vara före sluttid');
+  }
+  
   if (booking.userId.toString() !== userId && userRole !== 'Admin') {
     throw new ApiError(403, 'Du har inte behörighet att uppdatera denna bokning');
   }
+
 
   booking.startTime = startTime;
   booking.endTime = endTime;
