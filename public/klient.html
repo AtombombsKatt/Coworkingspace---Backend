@@ -8,12 +8,14 @@
   <h1>🔔 Notifieringar</h1>
   <ul id="notifications"></ul>
 
-  <!-- Socket.IO client -->
-  <script src="/socket.io/socket.io.js"></script>
+  <!-- Socket.IO  -->
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+  <script src="https://coworkingspace-backend-production.up.railway.app/socket.io/socket.io.js"></script>
+
+
   <script>
-    // Anslut till din backend – byt port om du kör något annat än 5000
-    // https://cdn.socket.io/4.7.2/socket.io.min.js
-    const socket = io('http://localhost:5000');
+    const socket = io('https://coworkingspace-backend-production.up.railway.app')
+    // const socket = io('http://localhost:5000');
 
     const list = document.getElementById('notifications');
 
